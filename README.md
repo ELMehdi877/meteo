@@ -2,7 +2,7 @@
 
 MétéoConnect est une application météorologique moderne et immersive conçue avec **React 19** et **Vite**. Elle offre des prévisions précises grâce à l'intégration de l'API Open-Meteo, le tout enveloppé dans une interface utilisateur élégante et performante.
 
-![Aperçu de l'application](/public/background.png)
+![Aperçu de l'application](public/background.png)
 
 ## 🚀 Fonctionnalités principales
 
@@ -64,6 +64,3 @@ src/
 ## 🤝 Contribution
 
 Les contributions, issues et demandes de fonctionnalités sont les bienvenues ! N'hésitez pas à consulter la page des issues.
-
----
-Développé avec ❤️ par **Antigravity** pour **ELMehdi877**
