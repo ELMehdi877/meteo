@@ -35,7 +35,7 @@ function App() {
     setError(null);
     try {
       const geoRes = await fetch(
-        `https://geocoding-api.open-meteo.com/v1/search?name=${query}&count=1&language=fr&format=json`
+        `https://geocoding-api.open-meteo.com/v1/search?name=${query}&count=5&language=fr&format=json`
       );
       const geoData = await geoRes.json();
       if (!geoData.results || geoData.results.length === 0) {
@@ -49,20 +49,24 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    // Initial fetch for Paris or Geolocation
+  const handleGetCurrentLocation = () => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           fetchWeather(position.coords.latitude, position.coords.longitude, "Ma Position");
         },
         () => {
+          setError("Impossible de détecter votre position. Utilisation de Paris par défaut.");
           handleSearch('Paris');
         }
       );
     } else {
       handleSearch('Paris');
     }
+  };
+
+  useEffect(() => {
+    handleGetCurrentLocation();
   }, []);
 
   return (
@@ -72,7 +76,7 @@ function App() {
         <p className="app-subtitle">Votre météo en un clin d'œil</p>
       </header>
 
-      <SearchBox onSearch={handleSearch} />
+      <SearchBox onSearch={handleSearch} onGetCurrentLocation={handleGetCurrentLocation} />
 
       {loading && (
         <div className="loader-container">
