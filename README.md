@@ -1,16 +1,69 @@
-# React + Vite
+# 🌦️ MétéoConnect | Premium Weather Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MétéoConnect est une application météorologique moderne et immersive conçue avec **React 19** et **Vite**. Elle offre des prévisions précises grâce à l'intégration de l'API Open-Meteo, le tout enveloppé dans une interface utilisateur élégante et performante.
 
-Currently, two official plugins are available:
+![Aperçu de l'application](/public/background.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Fonctionnalités principales
 
-## React Compiler
+- **🔍 Recherche Intelligente** : Auto-complétion des villes en temps réel avec détails géographiques.
+- **📍 Géolocalisation** : Détectez instantanément la météo de votre position actuelle en un clic.
+- **🌡️ Conditions en Temps Réel** : Affichage précis de la température, de l'humidité, du vent et de la visibilité.
+- **📈 Graphiques Interactifs** : Visualisation de la tendance thermique sur les prochaines 24 heures via des graphiques SVG personnalisés.
+- **📅 Prévisions Détaillées** :
+    - **Horaires** : Aperçu heure par heure pour les prochaines 24 heures.
+    - **Journalières** : Prévisions complètes sur 7 jours.
+- **🎨 Design Ultra-Premium** : Esthétique glassmorphic, arrière-plans dynamiques et micro-animations fluides.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Stack Technique
 
-## Expanding the ESLint configuration
+- **Frontend** : [React.js](https://react.dev/)
+- **Build Tool** : [Vite](https://vitejs.dev/)
+- **Styling** : Vanilla CSS 3 (Custom Design System)
+- **API** : [Open-Meteo](https://open-meteo.com/) (Forecast & Geocoding)
+- **Icons** : Unicode/SVG customisé
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Installation
+
+Suivez ces étapes pour lancer le projet localement :
+
+1.  **Cloner le dépôt** :
+    ```bash
+    git clone https://github.com/ELMehdi877/meteo.git
+    cd meteo
+    ```
+
+2.  **Installer les dépendances** :
+    ```bash
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement** :
+    ```bash
+    npm run dev
+    ```
+
+4.  **Accéder à l'application** : Ouvrez votre navigateur sur `http://localhost:5173` (ou le port indiqué dans votre terminal).
+
+## 📁 Structure du Projet
+
+```text
+src/
+├── components/          # Composants UI réutilisables
+│   ├── CurrentWeather   # Carte météo principale
+│   ├── TemperatureChart # Visualisation graphique
+│   ├── HourlyForecast   # Carrousel horaire
+│   ├── DailyForecast    # Liste journalière
+│   └── SearchBox        # Barre de recherche & autocomplete
+├── assets/              # Ressources statiques
+├── utils.js             # Logique utilitaire & mapping WMO
+├── App.jsx              # Orchestrateur principal
+└── index.css            # Design System & thèmes
+```
+
+## 🤝 Contribution
+
+Les contributions, issues et demandes de fonctionnalités sont les bienvenues ! N'hésitez pas à consulter la page des issues.
+
+---
+Développé avec ❤️ par **Antigravity** pour **ELMehdi877**
