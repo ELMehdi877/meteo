@@ -1,0 +1,13 @@
+/* Component-specific resets or adjustments if needed */
+.app-container {
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem;
+  }
+  .app-title {
+    font-size: 2.25rem;
+  }
+}
